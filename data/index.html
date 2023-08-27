@@ -1,58 +1,42 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp32-web-server-websocket-sliders/ -->
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>ESP IOT DASHBOARD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/al
-l.css" integrity="sha384-
-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="an
-onymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
     <div class="topnav">
-        <h1>ESP WEB SERVER</h1>
+        <h1>Multiple Sliders</h1>
     </div>
     <div class="content">
         <div class="card-grid">
             <div class="card">
-                <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 2</p>
+                <p class="card-title">Fader 1</p>
                 <p class="switch">
-                    <input type="range" oninput="updateSliderPWM(this)" id="pwmSlider2" min="0" max="100" step="1"
-                        value="0" class="slider">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider1" min="0" max="100" step="1" value ="0" class="slider">
                 </p>
-                <p class="state">Brightness: <span id="textSliderValue2"></span> &percnt;</p>
+                <p class="state">Brightness: <span id="sliderValue1"></span> &percnt;</p>
             </div>
             <div class="card">
-                <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 4</p>
+                <p class="card-title"> Fader 2</p>
                 <p class="switch">
-                    <input type="range" oninput="updateSliderPWM(this)" id="pwmSlider4" min="0" max="100" step="1"
-                        value="0" class="slider">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider2" min="0" max="100" step="1" value ="0" class="slider">
                 </p>
-                <p class="state">Brightness: <span id="textSliderValue4"></span> &percnt;</p>
+                <p class="state">Brightness: <span id="sliderValue2"></span> &percnt;</p>
             </div>
             <div class="card">
-                <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 12</p>
+                <p class="card-title"> Fader 3</p>
                 <p class="switch">
-                    <input type="range" oninput="updateSliderPWM(this)" id="pwmSlider12" min="0" max="100" step="1"
-                        value="0" class="slider">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider3" min="0" max="100" step="1" value ="0" class="slider">
                 </p>
-                <p class="state">Brightness: <span id="textSliderValue12"></span> &percnt;</p>
-            </div>
-            <div class="card">
-                <p class="card-title"><i class="fas fa-lightbulb"></i> GPIO 14</p>
-                <p class="switch">
-                    <input type="range" oninput="updateSliderPWM(this)" id="pwmSlider14" min="0" max="100" step="1"
-                        value="0" class="slider">
-                </p>
-                <p class="state">Brightness: <span id="textSliderValue14"></span> &percnt;</p>
+                <p class="state">Brightness: <span id="sliderValue3"></span> &percnt;</p>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
